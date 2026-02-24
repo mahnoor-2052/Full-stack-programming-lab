@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task 7 — Student JSON Handler</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,600;0,700;0,900;1,300;1,600&family=IBM+Plex+Mono:wght@300;400;500&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <div class="noise"></div>
+
+  <header>
+    <div class="header-inner">
+      <div class="brand">
+        <span class="brand-icon">{}</span>
+        <div>
+          <div class="brand-name">JSON Handler</div>
+          <div class="brand-task">Lab Task 07</div>
+        </div>
+      </div>
+      <div class="header-tags">
+        <span class="htag">JSON.stringify()</span>
+        <span class="htag">JSON.parse()</span>
+        <span class="htag">Destructuring</span>
+        <span class="htag">forEach</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- CONTROLS -->
+    <section class="controls-bar">
+      <button class="btn btn-terra" onclick="loadDefaultStudents()">Load 3 Default Students</button>
+      <button class="btn btn-outline" onclick="parseAndShow()">Parse + Display</button>
+      <button class="btn btn-ghost" onclick="clearAll()">Clear All</button>
+    </section>
+
+    <!-- ADD FORM -->
+    <section class="form-section">
+      <div class="form-label">Add Custom Student Object</div>
+      <div class="form-grid">
+        <input type="text" id="j-name" placeholder="Name" />
+        <input type="number" id="j-age" placeholder="Age" />
+        <input type="number" id="j-sem" placeholder="Semester" />
+        <input type="text" id="j-courses" placeholder="Courses (comma-separated)" />
+        <button class="btn btn-terra" onclick="addJsonStudent()">Convert & Add</button>
+      </div>
+      <div id="form-msg" class="form-msg"></div>
+    </section>
+
+    <!-- JSON PIPELINE -->
+    <div class="pipeline">
+
+      <!-- STEP 1: Stringify -->
+      <div class="pipe-step">
+        <div class="pipe-step-header">
+          <div class="step-num">01</div>
+          <div>
+            <div class="step-title">JSON.stringify()</div>
+            <div class="step-sub">Object → JSON string</div>
+          </div>
+        </div>
+        <div class="code-box" id="json-raw">// Awaiting data...</div>
+      </div>
+
+      <!-- ARROW -->
+      <div class="pipe-arrow">↓</div>
+
+      <!-- STEP 2: Parse -->
+      <div class="pipe-step">
+        <div class="pipe-step-header">
+          <div class="step-num">02</div>
+          <div>
+            <div class="step-title">JSON.parse()</div>
+            <div class="step-sub">JSON string → Object</div>
+          </div>
+        </div>
+        <div class="parsed-box" id="json-parsed">
+          <div class="parse-empty">No data parsed yet</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- STEP 3: Display via innerHTML -->
+    <div class="display-section">
+      <div class="display-header">
+        <div class="step-num sm">03</div>
+        <div>
+          <div class="step-title">innerHTML Display</div>
+          <div class="step-sub">forEach loop + Destructuring → rendered cards</div>
+        </div>
+      </div>
+      <div class="student-cards" id="student-cards"></div>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>Lab Task 07 &mdash; JSON.stringify() &bull; JSON.parse() &bull; Destructuring &bull; forEach &bull; innerHTML</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

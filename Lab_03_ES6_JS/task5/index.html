@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task 5 — Product Catalog</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <div class="brand-mark">M</div>
+      <div class="brand-text">
+        <div class="brand-name">MapStore</div>
+        <div class="brand-sub">Product Catalog</div>
+      </div>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="ss-label">Task Info</div>
+      <div class="task-tag">Lab Task 05</div>
+      <div class="ss-item">Key → Product ID</div>
+      <div class="ss-item">Value → Product Object</div>
+      <div class="ss-item">.get() &bull; .set() &bull; .delete()</div>
+      <div class="ss-item">.size &bull; .has() &bull; .forEach()</div>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="ss-label">Search by ID</div>
+      <input type="text" id="mp-search" placeholder="e.g. P001" />
+      <button class="btn btn-sidebar" onclick="searchProduct()">Search</button>
+      <div id="search-result" class="search-result"></div>
+    </div>
+
+    <div class="sidebar-stats">
+      <div class="ss-stat">
+        <div class="ss-stat-n" id="map-size">5</div>
+        <div class="ss-stat-l">Products<br/><span>.size</span></div>
+      </div>
+    </div>
+  </aside>
+
+  <div class="main-area">
+    <header>
+      <h1 class="page-title">Product Catalog</h1>
+      <p class="page-sub">Powered by JavaScript Map — Key/Value Storage</p>
+    </header>
+
+    <section class="add-section">
+      <div class="add-title">Add Product to Map</div>
+      <div class="add-grid">
+        <div class="field">
+          <label>Product ID</label>
+          <input type="text" id="mp-id" placeholder="P006" />
+        </div>
+        <div class="field">
+          <label>Product Name</label>
+          <input type="text" id="mp-name" placeholder="Wireless Mouse" />
+        </div>
+        <div class="field">
+          <label>Price (USD)</label>
+          <input type="number" id="mp-price" placeholder="99.99" min="0" step="0.01" />
+        </div>
+        <div class="field">
+          <label>Category</label>
+          <input type="text" id="mp-cat" placeholder="Electronics" />
+        </div>
+      </div>
+      <button class="btn btn-add" onclick="addMapProduct()">Add to Map</button>
+      <div id="add-msg" class="add-msg"></div>
+    </section>
+
+    <div class="table-wrap">
+      <table id="product-table">
+        <thead>
+          <tr>
+            <th>Map Key (ID)</th>
+            <th>Product Name</th>
+            <th>Price</th>
+            <th>Category</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="product-tbody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

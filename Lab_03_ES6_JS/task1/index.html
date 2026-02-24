@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task 1 — Student Management System</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Crimson+Pro:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <div class="paper-texture"></div>
+
+  <header>
+    <div class="header-inner">
+      <div class="emblem">SMS</div>
+      <div>
+        <h1 class="site-title">Student Management System</h1>
+       
+      </div>
+      <div class="task-badge">Task 01</div>
+    </div>
+  </header>
+
+  <main>
+    <section class="form-section">
+      <div class="section-ornament">✦ Enroll a New Scholar ✦</div>
+      <div class="form-card">
+        <div class="form-row">
+          <div class="field">
+            <label>Full Name</label>
+            <input type="text" id="s-name" placeholder="e.g. Abdullah Khan" />
+          </div>
+          <div class="field">
+            <label>Semester</label>
+            <input type="number" id="s-sem" placeholder="1–8" min="1" max="8" />
+          </div>
+        </div>
+        <div class="field">
+          <label>Enrolled Courses <span class="hint">(comma-separated)</span></label>
+          <input type="text" id="s-courses" placeholder="e.g. Mathematics, Physics, OOP" />
+        </div>
+        <button class="btn-enroll" onclick="addStudent()">Enroll Student</button>
+        <div id="form-msg" class="form-msg"></div>
+      </div>
+    </section>
+
+    <section class="roster-section">
+      <div class="section-ornament">✦ Scholar Roster ✦</div>
+      <div class="roster-meta" id="roster-meta">No students enrolled yet</div>
+      <div class="students-grid" id="students-grid"></div>
+    </section>
+  </main>
+
+  
+
+  <script src="script.js"></script>
+</body>
+</html>

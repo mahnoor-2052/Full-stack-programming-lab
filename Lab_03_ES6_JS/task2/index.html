@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task 2 — Online Shopping Cart</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <div class="scanlines"></div>
+  <div class="grid-bg"></div>
+
+  <header>
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-bracket">[</span>CART<span class="logo-v">_v2</span><span class="logo-bracket">]</span>
+      </div>
+      <div class="header-info">
+        <div class="header-title">Online Shopping Cart</div>
+       
+      </div>
+      
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ADD PRODUCT -->
+    <section class="panel" id="panel-add">
+      <div class="panel-label">// ADD_PRODUCT</div>
+      <div class="input-row">
+        <input type="text" id="p-name" placeholder="product_name" />
+        <input type="number" id="p-price" placeholder="price_usd" min="0" step="0.01" />
+        <button class="btn btn-cyan" onclick="addProduct()">+ CREATE</button>
+      </div>
+    </section>
+
+    <!-- CONTROLS -->
+    <section class="panel" id="panel-controls">
+      <div class="panel-label">// OPERATIONS</div>
+      <div class="btn-row">
+        <button class="btn btn-green" onclick="addMultipleToCart()">
+          <span class="btn-icon">▶</span> addToCart(...rest)
+        </button>
+        <button class="btn btn-yellow" onclick="spreadAndDestructure()">
+          <span class="btn-icon">⊕</span> Spread + Destructure
+        </button>
+        <button class="btn btn-red" onclick="clearCart()">
+          <span class="btn-icon">✕</span> CLEAR CART
+        </button>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <div class="stats-row">
+      <div class="stat-panel">
+        <div class="stat-label">TOTAL_ITEMS</div>
+        <div class="stat-value cyan" id="stat-count">0</div>
+      </div>
+      <div class="stat-panel">
+        <div class="stat-label">TOTAL_PRICE</div>
+        <div class="stat-value green" id="stat-price">$0.00</div>
+      </div>
+      <div class="stat-panel">
+        <div class="stat-label">FIRST_ITEM</div>
+        <div class="stat-value yellow" id="stat-first">—</div>
+      </div>
+      <div class="stat-panel">
+        <div class="stat-label">REMAINING</div>
+        <div class="stat-value" id="stat-rest">—</div>
+      </div>
+    </div>
+
+    <!-- TWO COLUMN -->
+    <div class="two-col">
+      <div>
+        <div class="col-label">// AVAILABLE_PRODUCTS[ ]</div>
+        <div id="products-list"></div>
+      </div>
+      <div>
+        <div class="col-label">// CART_STATE[ ]</div>
+        <div id="cart-list"></div>
+      </div>
+    </div>
+
+    <!-- LOG -->
+    <section class="panel">
+      <div class="panel-label">// CONSOLE_OUTPUT</div>
+      <div class="console-box" id="console-log">
+        <div class="console-line dim">> System initialized. Ready for operations.</div>
+      </div>
+    </section>
+
+  </main>
+
+ 
+
+  <script src="script.js"></script>
+</body>
+</html>

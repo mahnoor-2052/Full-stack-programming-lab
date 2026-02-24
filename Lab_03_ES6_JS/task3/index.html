@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task 3 — Async Data Loader</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600;700;800&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <div class="stars"></div>
+  <div class="nebula"></div>
+
+  <header>
+    <div class="header-inner">
+      <div class="planet"></div>
+      <div>
+        <h1 class="site-title">Async Data Loader</h1>
+        <p class="site-sub">Promise · setTimeout · .then() · .catch()</p>
+      </div>
+      <div class="task-badge">TASK 03</div>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="control-panel">
+      <div class="panel-title">Mission Control</div>
+      <div class="control-row">
+        <label class="toggle-wrap">
+          <input type="checkbox" id="should-fail" class="toggle-input" />
+          <span class="toggle-slider"></span>
+          <span class="toggle-label">Simulate Server Failure</span>
+        </label>
+        <button class="launch-btn" id="launch-btn" onclick="loadUsers()">
+          <span class="launch-icon">⬡</span>
+          FETCH USERS
+        </button>
+        <button class="clear-btn" onclick="clearResults()">RESET</button>
+      </div>
+    </section>
+
+    <!-- STATUS DISPLAY -->
+    <div id="promise-status" class="status-area"></div>
+
+    <!-- PROGRESS BAR -->
+    <div id="progress-wrap" class="progress-wrap hidden">
+      <div class="progress-label" id="progress-label">Connecting to server...</div>
+      <div class="progress-track">
+        <div class="progress-fill" id="progress-fill"></div>
+      </div>
+      <div class="progress-time" id="progress-time">0s / 3s</div>
+    </div>
+
+    <!-- USERS GRID -->
+    <div class="users-grid" id="users-grid"></div>
+
+  </main>
+
+  <footer>
+    <p>Lab Task 03 &mdash; Promise &bull; setTimeout(3000ms) &bull; .then() &bull; .catch() &bull; Resolve &amp; Reject</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

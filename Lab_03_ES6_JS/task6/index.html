@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task 6 — University Portal</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Fira+Code:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <div class="blob blob1"></div>
+  <div class="blob blob2"></div>
+  <div class="blob blob3"></div>
+
+  <header>
+    <div class="header-inner">
+      <div class="logo">
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+          <rect width="36" height="36" rx="10" fill="url(#g1)"/>
+          <defs><linearGradient id="g1" x1="0" y1="0" x2="36" y2="36"><stop stop-color="#6366f1"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient></defs>
+          <text x="10" y="25" fill="white" font-size="18" font-weight="bold" font-family="serif">U</text>
+        </svg>
+        <span class="logo-text">UniPortal</span>
+      </div>
+      <div class="header-center">
+        <h1 class="site-title">Mini University Portal</h1>
+        <p class="site-sub">Class + Map + Set + Promise — Combined System</p>
+      </div>
+      <div class="task-pill">Task 06</div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- TOP PANELS -->
+    <div class="top-grid">
+
+      <!-- ADD STUDENT -->
+      <div class="glass-card">
+        <div class="card-eyebrow">Class + Map</div>
+        <h2 class="card-title">Enroll Student</h2>
+        <div class="field-group">
+          <input type="text" id="p-sname" placeholder="Student name" />
+          <input type="text" id="p-scourses" placeholder="Courses (comma-separated)" />
+        </div>
+        <button class="btn btn-indigo" onclick="enrollStudent()">
+          <span>Enroll →</span>
+        </button>
+        <div id="enroll-msg" class="card-msg"></div>
+      </div>
+
+      <!-- REGISTER COURSE -->
+      <div class="glass-card">
+        <div class="card-eyebrow">Set</div>
+        <h2 class="card-title">Register Course</h2>
+        <div class="field-group">
+          <input type="text" id="p-course" placeholder="Course name" />
+        </div>
+        <div class="btn-row">
+          <button class="btn btn-violet" onclick="registerCourse()">Register →</button>
+          <button class="btn btn-outline" onclick="saveToDB()">Save to DB (Promise)</button>
+        </div>
+        <div id="course-msg" class="card-msg"></div>
+      </div>
+
+    </div>
+
+    <!-- SAVE STATUS -->
+    <div id="save-status"></div>
+
+    <!-- STATS ROW -->
+    <div class="stats-strip">
+      <div class="strip-stat">
+        <span class="strip-n" id="s-students">0</span>
+        <span class="strip-l">Enrolled Students</span>
+        <span class="strip-badge">Map.size</span>
+      </div>
+      <div class="strip-divider"></div>
+      <div class="strip-stat">
+        <span class="strip-n" id="s-courses">0</span>
+        <span class="strip-l">Unique Courses</span>
+        <span class="strip-badge">Set.size</span>
+      </div>
+      <div class="strip-divider"></div>
+      <div class="strip-stat">
+        <span class="strip-n" id="s-saves">0</span>
+        <span class="strip-l">Successful Saves</span>
+        <span class="strip-badge">Promise.resolve</span>
+      </div>
+    </div>
+
+    <!-- BOTTOM CONTENT -->
+    <div class="bottom-grid">
+      <div>
+        <div class="section-head">Students <span class="code-tag">Map&lt;id, Student&gt;</span></div>
+        <div id="students-list"></div>
+      </div>
+      <div>
+        <div class="section-head">Courses <span class="code-tag">Set&lt;string&gt;</span></div>
+        <div id="courses-list"></div>
+        <div class="section-head" style="margin-top:1.5rem">Activity Log</div>
+        <div class="log-box" id="activity-log">
+          <div class="log-line">Portal initialized. Ready.</div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>Lab Task 06 &mdash; ES6 Class &bull; Map &bull; Set &bull; Promise &mdash; Combined System</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
