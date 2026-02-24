@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Task 1 - Student Management System</title>
+  <link rel="stylesheet" href="task1.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Student Management System</h1>
+
+    <form id="studentForm">
+      <div class="row">
+        <input type="number" id="id" placeholder="Student ID" required />
+        <input type="text" id="name" placeholder="Full Name" required />
+      </div>
+
+      <div class="row">
+        <input type="text" id="semester" placeholder="Semester" required />
+        <input type="text" id="courses" placeholder="Courses (comma separated)" required />
+      </div>
+
+      <button type="submit">Add Student</button>
+    </form>
+
+    <div class="controls">
+      <input type="text" id="search" placeholder="Search by Name" />
+      <button id="clearBtn">Clear All</button>
+    </div>
+
+    <div class="stats" id="stats"></div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Semester</th>
+          <th>Courses</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="studentTable"></tbody>
+    </table>
+  </div>
+
+  <script src="task1.js"></script>
+</body>
+</html>
