@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: #1a0533;
+  background-image:
+    radial-gradient(ellipse at top left, #ff44aa33, transparent 60%),
+    radial-gradient(ellipse at bottom right, #44aaff33, transparent 60%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Nunito', sans-serif;
+  padding: 24px;
+}
+
+.game-wrap {
+  width: 100%;
+  max-width: 560px;
+}
+
+.screen { width: 100%; }
+
+/* START SCREEN */
+#startScreen { text-align: center; }
+
+.logo {
+  font-family: 'Fredoka One', cursive;
+  font-size: 90px;
+  color: rgba(255,100,200,0.15);
+  line-height: 1;
+  margin-bottom: -10px;
+}
+
+h1 {
+  font-family: 'Fredoka One', cursive;
+  font-size: 68px;
+  line-height: 1;
+  color: #fff;
+  text-shadow: 0 4px 20px rgba(255,80,180,0.4);
+  margin-bottom: 16px;
+}
+
+#startScreen p {
+  font-size: 16px;
+  color: #aa88cc;
+  margin-bottom: 36px;
+}
+
+.big-btn {
+  background: linear-gradient(135deg, #ff44aa, #cc22ff);
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  padding: 16px 44px;
+  font-family: 'Fredoka One', cursive;
+  font-size: 22px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  box-shadow: 0 6px 30px rgba(255,40,180,0.4);
+  transition: transform 0.15s, box-shadow 0.2s;
+}
+.big-btn:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 10px 36px rgba(255,40,180,0.5);
+}
+.big-btn:active { transform: scale(0.97); }
+
+/* QUIZ SCREEN */
+.quiz-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  gap: 16px;
+}
+
+.q-progress {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+}
+
+#qNum {
+  font-family: 'Fredoka One', cursive;
+  font-size: 18px;
+  color: #ff88cc;
+  white-space: nowrap;
+}
+
+#qTotal {
+  font-size: 14px;
+  color: #664488;
+  white-space: nowrap;
+}
+
+.prog-bar {
+  flex: 1;
+  background: #2d1050;
+  border-radius: 99px;
+  height: 8px;
+  overflow: hidden;
+}
+
+.prog-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #ff44aa, #cc22ff);
+  border-radius: 99px;
+  transition: width 0.5s ease;
+}
+
+.score-box {
+  font-size: 14px;
+  color: #aa88cc;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.score-box b { color: #ff88cc; font-size: 18px; }
+
+.q-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,100,200,0.2);
+  border-radius: 20px;
+  padding: 32px 28px;
+  margin-bottom: 20px;
+  backdrop-filter: blur(8px);
+}
+
+.q-text {
+  font-size: 18px;
+  font-weight: 700;
+  color: #eeddff;
+  line-height: 1.5;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.option-btn {
+  background: rgba(255,255,255,0.06);
+  border: 1.5px solid rgba(255,100,200,0.2);
+  border-radius: 12px;
+  padding: 14px 18px;
+  color: #ccaaee;
+  font-family: 'Nunito', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.2s;
+}
+.option-btn:hover:not(:disabled) {
+  background: rgba(255,100,200,0.12);
+  border-color: #ff88cc;
+  color: #fff;
+  transform: translateX(4px);
+}
+.option-btn.correct {
+  background: rgba(80,220,120,0.2);
+  border-color: #50dc78;
+  color: #80ffaa;
+}
+.option-btn.wrong {
+  background: rgba(255,80,80,0.18);
+  border-color: #ff5555;
+  color: #ffaaaa;
+}
+.option-btn:disabled { cursor: default; }
+
+.q-nav { text-align: center; }
+
+/* RESULT SCREEN */
+#resultScreen { text-align: center; }
+
+.result-icon {
+  font-size: 80px;
+  animation: bounce 0.6s ease;
+  display: block;
+  margin-bottom: 16px;
+}
+
+@keyframes bounce {
+  0%   { transform: scale(0) rotate(-20deg); }
+  60%  { transform: scale(1.2) rotate(5deg); }
+  100% { transform: scale(1) rotate(0); }
+}
+
+#resultScreen h2 {
+  font-family: 'Fredoka One', cursive;
+  font-size: 44px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.score-display {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+#finalScore {
+  font-family: 'Fredoka One', cursive;
+  font-size: 80px;
+  color: #ff88cc;
+  line-height: 1;
+  text-shadow: 0 4px 20px rgba(255,100,200,0.5);
+}
+
+.out-of {
+  font-size: 32px;
+  color: #664488;
+  font-weight: 700;
+}
+
+#resultMsg {
+  color: #aa88cc;
+  font-size: 16px;
+  margin-bottom: 36px;
+}

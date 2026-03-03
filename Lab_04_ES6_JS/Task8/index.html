@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Task 8 – Quiz Game</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+  <div class="game-wrap">
+
+    <!-- Start Screen -->
+    <div id="startScreen" class="screen">
+      <div class="logo">08</div>
+      <h1>Quiz<br>Challenge</h1>
+      <p>10 questions · Multiple Choice · Web Dev</p>
+      <button id="startBtn" class="big-btn">Start Quiz</button>
+    </div>
+
+    <!-- Quiz Screen -->
+    <div id="quizScreen" class="screen" style="display:none;">
+      <div class="quiz-header">
+        <div class="q-progress">
+          <span id="qNum">Q1</span>
+          <div class="prog-bar"><div class="prog-fill" id="progFill"></div></div>
+          <span id="qTotal">/ 10</span>
+        </div>
+        <div class="score-box">Score: <b id="scoreTrack">0</b></div>
+      </div>
+
+      <div class="q-card">
+        <p class="q-text" id="qText">Question goes here</p>
+        <div class="options" id="options"></div>
+      </div>
+
+      <div class="q-nav">
+        <button id="nextBtn" class="big-btn" style="display:none;">Next →</button>
+      </div>
+    </div>
+
+    <!-- Result Screen -->
+    <div id="resultScreen" class="screen" style="display:none;">
+      <div class="result-icon" id="resultIcon">🏆</div>
+      <h2 id="resultTitle">Excellent!</h2>
+      <div class="score-display">
+        <span id="finalScore">0</span><span class="out-of">/ 10</span>
+      </div>
+      <p id="resultMsg">Amazing performance!</p>
+      <button id="restartBtn" class="big-btn">Play Again</button>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Task 4 – Tabbed Content</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+  <div class="page">
+
+    <div class="hero">
+      <span class="tag">TASK 04</span>
+      <h1>Knowledge Hub</h1>
+      <p>Explore topics below — click any tab to dive in.</p>
+    </div>
+
+    <div class="tab-section" id="tabSection">
+      <div class="tab-bar">
+        <button class="tab-btn active" data-tab="html">HTML</button>
+        <button class="tab-btn" data-tab="css">CSS</button>
+        <button class="tab-btn" data-tab="js">JavaScript</button>
+        <button class="tab-btn" data-tab="jquery">jQuery</button>
+        <button class="tab-btn" data-tab="ajax">Ajax</button>
+      </div>
+
+      <div class="tab-content active" id="tab-html">
+        <h3>HyperText Markup Language</h3>
+        <p>HTML is the backbone of every web page. It provides the semantic structure using elements like headings, paragraphs, links, images, and forms. Modern HTML5 introduced new semantic tags such as <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, and <code>&lt;nav&gt;</code> to improve accessibility and SEO.</p>
+        <ul>
+          <li>Semantic structure for content</li>
+          <li>Forms and input elements</li>
+          <li>Multimedia: images, video, audio</li>
+          <li>Canvas &amp; SVG graphics</li>
+        </ul>
+      </div>
+
+      <div class="tab-content" id="tab-css">
+        <h3>Cascading Style Sheets</h3>
+        <p>CSS controls the visual presentation of HTML elements. With CSS3, developers can create rich animations, responsive layouts using Flexbox and Grid, custom properties (variables), and much more — all without JavaScript.</p>
+        <ul>
+          <li>Flexbox &amp; CSS Grid layouts</li>
+          <li>Animations &amp; transitions</li>
+          <li>CSS variables (custom properties)</li>
+          <li>Media queries for responsiveness</li>
+        </ul>
+      </div>
+
+      <div class="tab-content" id="tab-js">
+        <h3>JavaScript (ES6+)</h3>
+        <p>JavaScript is the programming language of the web. ES6 introduced major improvements: arrow functions, template literals, destructuring, classes, Promises, and modules — making JS cleaner and more powerful than ever.</p>
+        <ul>
+          <li>Arrow functions &amp; closures</li>
+          <li>Promises &amp; async/await</li>
+          <li>Destructuring &amp; spread operator</li>
+          <li>Modules: import / export</li>
+        </ul>
+      </div>
+
+      <div class="tab-content" id="tab-jquery">
+        <h3>jQuery Library</h3>
+        <p>jQuery is a fast, feature-rich JavaScript library that simplifies DOM manipulation, event handling, CSS changes, and animations. Its concise syntax lets you do more with less code while ensuring cross-browser compatibility.</p>
+        <ul>
+          <li>DOM selection &amp; manipulation</li>
+          <li>Event handling (.on, .click)</li>
+          <li>Effects: fadeIn, slideToggle, animate</li>
+          <li>Method chaining</li>
+        </ul>
+      </div>
+
+      <div class="tab-content" id="tab-ajax">
+        <h3>Ajax &amp; Fetch API</h3>
+        <p>Ajax (Asynchronous JavaScript and XML) allows web pages to communicate with a server in the background — without refreshing the page. Combined with the modern Fetch API or jQuery's $.ajax(), you can build dynamic, real-time web applications.</p>
+        <ul>
+          <li>GET &amp; POST requests</li>
+          <li>JSON data handling</li>
+          <li>$.ajax(), $.get(), $.post()</li>
+          <li>Error handling &amp; loading states</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

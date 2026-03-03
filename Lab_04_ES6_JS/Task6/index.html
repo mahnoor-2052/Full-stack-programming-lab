@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Task 6 – API Data Fetcher</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+  <div class="bg-orbs">
+    <div class="orb orb1"></div>
+    <div class="orb orb2"></div>
+    <div class="orb orb3"></div>
+  </div>
+
+  <div class="page">
+    <header>
+      <span class="pill">TASK 06</span>
+      <h1>Post<br>Explorer</h1>
+      <p>Fetching data from JSONPlaceholder API</p>
+    </header>
+
+    <div class="toolbar">
+      <button id="fetchBtn">Load Posts</button>
+      <div id="status" class="status-badge"></div>
+    </div>
+
+    <div id="postList" class="post-grid"></div>
+
+    <div class="load-more-wrap" id="loadMoreWrap" style="display:none;">
+      <button id="loadMoreBtn">Load More Posts</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

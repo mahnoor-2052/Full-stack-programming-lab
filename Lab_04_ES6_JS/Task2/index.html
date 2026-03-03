@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Task 2 – Animated Image Gallery</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+  <div class="page-wrap">
+
+    <header class="top-bar">
+      <span class="label">TASK 02</span>
+      <h1>Gallery</h1>
+    </header>
+
+    <div class="gallery-wrap">
+      <button class="nav-btn" id="prevBtn">&#8592;</button>
+
+      <div class="frame">
+        <div class="slides-container" id="slidesContainer">
+          <div class="slide active">
+            <img src="https://picsum.photos/seed/alpine/700/440" alt="Alpine Lake" />
+          </div>
+          <div class="slide">
+            <img src="https://picsum.photos/seed/forest22/700/440" alt="Misty Forest" />
+          </div>
+          <div class="slide">
+            <img src="https://picsum.photos/seed/desert9/700/440" alt="Desert Dunes" />
+          </div>
+          <div class="slide">
+            <img src="https://picsum.photos/seed/city77/700/440" alt="City Night" />
+          </div>
+          <div class="slide">
+            <img src="https://picsum.photos/seed/ocean55/700/440" alt="Ocean Waves" />
+          </div>
+        </div>
+      </div>
+
+      <button class="nav-btn" id="nextBtn">&#8594;</button>
+    </div>
+
+    <div class="caption-area">
+      <p id="caption">Alpine Lake</p>
+      <div class="dots" id="dots"></div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

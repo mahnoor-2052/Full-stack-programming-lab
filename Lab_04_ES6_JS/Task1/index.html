@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Task 1 – Dynamic List Manager</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+  <div class="page">
+
+    <header class="page-header">
+      <div class="header-top">
+        <span class="task-chip">TASK 01</span>
+        <span class="item-count"><span id="count">0</span> items</span>
+      </div>
+      <h1>My List</h1>
+      <p class="subtitle">Add things you want to remember.</p>
+    </header>
+
+    <div class="input-card">
+      <input type="text" id="itemInput" placeholder="Write something here…" maxlength="80" autocomplete="off" />
+      <button id="addBtn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+          <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+        </svg>
+        Add
+      </button>
+    </div>
+
+    <ul id="itemList">
+      <li class="empty-state">
+        <span class="empty-icon">✦</span>
+        <span>Nothing here yet — add your first item above.</span>
+      </li>
+    </ul>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
